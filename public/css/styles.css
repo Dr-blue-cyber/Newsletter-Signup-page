@@ -41,4 +41,18 @@ body {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+} 
+
+
+.container
+{
+  background-color: antiquewhite;
+}
+
+.footer{
+  width: 100%;
+  height: auto;
+  position: relative;
+  bottom: -20px;
+  margin: 0;
 }

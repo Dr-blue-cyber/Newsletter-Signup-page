@@ -10,6 +10,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 app.get("/",function(req,res){
+    console.log(req);
     res.sendFile(__dirname + "/signup.html");
 })
 
@@ -20,7 +21,7 @@ app.post("/",function(req,res){
     const email = req.body.email;
 
     //console.log(firstName, lastName, email);
-
+ 
     //our data is gone send by the body parameter using key called member
     
     const data = {
@@ -72,12 +73,12 @@ app.post("/",function(req,res){
 
 //redirect to home 
 app.post("/failurer",function(req,res){
-    res.redirect("/");
+    res.redirect("/  ");
 })
 
 
 
-app.listen(process.env.PORT,8000,function()
+app.listen(process.env.PORT || 8000,function()
 {
     console.log("server is running on port 8000");
 
